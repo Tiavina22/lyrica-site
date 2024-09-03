@@ -84,3 +84,8 @@ body {
     height: auto;
     flex-shrink: 0;
 }
+
+button a{
+    color: white;
+    text-decoration: none;
+}
