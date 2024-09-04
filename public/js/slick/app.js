@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.querySelector('#downloadButton');
     const downloadCountElement = document.querySelector('#downloadCount');
 
-    // Fonction pour obtenir le nombre de téléchargements
     const getDownloadCount = async () => {
         try {
             const response = await fetch('/api/downloads');
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Fonction pour incrémenter le nombre de téléchargements
     const incrementDownloadCount = async () => {
         try {
             const response = await fetch('/api/downloads', { method: 'POST' });
@@ -50,10 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Mettre à jour le nombre de téléchargements au chargement de la page
     getDownloadCount();
 
-    // Événement de clic sur le bouton de téléchargement
     downloadButton.addEventListener('click', () => {
         incrementDownloadCount();
     });
