@@ -26,7 +26,6 @@
             Enjoy a rich and authentic experience that combines precise lyric synchronization with the cultural
             diversity of Malagasy music.</p>
         <button class="btn-download" id="downloadButton"><a href="./apk/Lyrica.apk">Download</a></button>
-        <p id="downloadCount">Number of downloads : 0</p>
         <div class="screenshoot">
             <div><img src="./src/images/1_framed.png" class="screenshoot-img" alt=""></div>
             <div><img src="./src/images/2_framed.png" class="screenshoot-img" alt=""></div>
@@ -43,44 +42,5 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./js/slick/slick/slick.min.js"></script>
     <script src="./js/slick/app.js"></script>
-    <script>
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const downloadButton = document.querySelector('#downloadButton');
-    const downloadCountElement = document.querySelector('#downloadCount');
-
-    const getDownloadCount = async () => {
-        try {
-            const response = await fetch('/api/downloads');
-            if (!response.ok) throw new Error('Erreur de réseau');
-            const data = await response.json();
-            downloadCountElement.textContent = `Nombre de téléchargements : ${data.count}`;
-        } catch (error) {
-            console.error('Erreur lors de la récupération du nombre de téléchargements :', error);
-            downloadCountElement.textContent = 'Erreur lors de la récupération du nombre de téléchargements';
-        }
-    };
-
-    const incrementDownloadCount = async () => {
-        try {
-            const response = await fetch('/api/downloads', { method: 'POST' });
-            if (!response.ok) throw new Error('Erreur de réseau');
-            const data = await response.json();
-            downloadCountElement.textContent = `Nombre de téléchargements : ${data.count}`;
-        } catch (error) {
-            console.error('Erreur lors de l\'incrémentation du nombre de téléchargements :', error);
-        }
-    };
-
-    getDownloadCount();
-
-    downloadButton.addEventListener('click', () => {
-        incrementDownloadCount();
-    });
-});
-
-    </script>
 </body>
-
 </html>
