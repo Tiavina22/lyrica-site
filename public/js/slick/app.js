@@ -20,6 +20,7 @@ $('.screenshoot').slick({
         }
     ]
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.querySelector('#downloadButton');
     const downloadCountElement = document.querySelector('#downloadCount');
