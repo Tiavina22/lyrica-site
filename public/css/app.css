@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Montserrat-Bold';
-    src: url('../fonts/Montserrat-Bold.ttf');
+    font-family: 'Dm-Sans-Bold';
+    src: url('../fonts/DMSans-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('../fonts/Montserrat-Regular.ttf');
+    font-family: 'Dm-Sans-Regular';
+    src: url('../fonts/DMSans-Regular.ttf');
 }
 
 body {
     background-color: black;
     color: white;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Dm-Sans-Regular';
     margin: 0;
     padding: 0;
     padding-top: 6%;
@@ -32,7 +32,7 @@ body {
 }
 
 .title {
-    font-family: 'Montserrat-Bold';
+    font-family: 'Dm-Sans-Bold';
 }
 
 .text {
@@ -53,7 +53,7 @@ body {
     border: 1px solid rgb(0, 81, 255);
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Dm-Sans-Regular';
     cursor: pointer;
     font-size: 16px;
 }
