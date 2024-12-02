@@ -102,5 +102,8 @@ button a{
 }
 
 .texte_copyright{
-    font-size: 7px;
+    font-size: 12px;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
 }
